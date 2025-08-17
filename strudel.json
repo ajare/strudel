@@ -1,0 +1,10 @@
+{
+  "_base": "https://raw.githubusercontent.com/ajare/strudel/main/",
+  "amen": [
+    "samples/breaks/AmenClean_A_175.wav",
+    "samples/breaks/AmenEQ1_A_175.wav",
+    "samples/breaks/AmenEQ2_A_175.wav",
+    "samples/breaks/AmenEQ3_A_175.wav",
+    "samples/breaks/AmenEQ4_A_175.wav"
+  ]
+}
