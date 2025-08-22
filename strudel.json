@@ -6,5 +6,8 @@
     "samples/breaks/AmenEQ2_A_175.wav",
     "samples/breaks/AmenEQ3_A_175.wav",
     "samples/breaks/AmenEQ4_A_175.wav"
+  ],
+  "pads": [
+    "samples/pads/hive_90s_pad_172.wav"
   ]
 }
