@@ -1,0 +1,21 @@
+setcpm(85 / 4)
+
+$piano: n("[0 <5 6> 4 <7*2 2>]").euclid(5, 8)
+  //.seg(8)
+  //.adsr(0.1, 0.1, 0.4 0.8)
+  .sometimesBy(0.125, ply("2"))
+  .s("piano")
+  .scale("D:minor").scaleTrans("<0 7 14 <21 12>>")
+  .lpf(rand.range(300, 500))
+  .lpq(5)
+  .delay(rand.range(0.5, 0.8))
+  .room(0.5)
+  .postgain(0.6)
+
+  ._pianoroll()
+
+$chords: note("[d3, f3, a3] [a3, c4, e4] [f3, a3, c4] <[g4, a#4, d5] [d3, f3, a3]>").slow(4)
+  .s("piano")
+  .lpf(500)
+  .postgain(0.4)
+  ._punchcard({ labels: 1 })
