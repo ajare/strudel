@@ -1,17 +1,28 @@
 setcpm(75 / 4)
 
 // Change euclidean params can change energy - change step from 1 up to 5
-
+// Building up the step param like this works well as an intro...
+// Pause on third is nice, but notes need to be tweaked a bit.  
 const p1 = n("<0 4 ~ [2 4]!2 3 ~ 3 6>").euclid("<2 4 5 7>/4", 8)  
   .scale("D:minor").scaleTrans("<0 7>");
 
+// This needs an extra note somewhere, but carefully, as it's very nice at
+// the moment.
 const p2 = n("[0 <5 6> 4 <7*2 2>]").euclid(5, 8)
   .sometimesBy(0.125, ply("2"))
   .s("piano")
   .scale("D:minor").scaleTrans("<0 7 14 <21 12>>");
 
+// This can definitely be improved.
 const p3 = n("<0 4 ~ 5 3 2>").euclid(5, 8)
   .scale("D:minor").scaleTrans("<0 12>");
+
+// Another one.  5 scale transpositions (ie odd number) means that it flips each time through
+// because we are dividing the main pattern by 2
+// Don't use so much delay on this as it's already quite an involved pattern, or reduce delay
+// as increase euclid step
+const p4 = n("[0 2 3 3@2 5 5@2 2 [5 7] 6 4 2 0 3@2]/2").euclid("<3 5 7 7 8>/2", 8)  
+  .scale("D:minor").scaleTrans("<0 7 14 7 [5 4 3]>");
 
 $piano: seqPLoop(
   [0, 16, p1],
